@@ -1,0 +1,24 @@
+{% load static %}
+
+<nav class="sidebar">
+    <div class="sidebar__burger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="sidebar__profile-picture"></div>
+    <h1 class="sidebar__name">Ludovic <span class="sidebar__name--bg">Nicolau</span></h1>
+    <ul class="sidebar__socials">
+        <li><a href="https://linkedin.com/in/ludovicnicolau"> <img width="32px" src="{% static 'images/linkedin.svg' %}" alt="linkedin icon"> </a></li>
+        <li><a href="https://github.com/ludovicnicolau"> <img width="32px" src="{% static 'images/square-github.svg' %}" alt="github icon"> </a></li>
+        <!-- <li><a href="https://ludovicn.itch.io"><img src="" alt="itch.io icon"></a></li> -->
+    </ul>
+    <!-- <ul class="sidebar__sections">
+        <li><a href="">Accueil</a></li>
+        <li><a href="">À propos</a></li>
+        <li><a href="">Compétences</a></li>
+        <li><a href="">Contact</a></li>
+    </ul> -->
+</nav>
+
+<script src="{% static 'js/sidebar.js' %}"></script>

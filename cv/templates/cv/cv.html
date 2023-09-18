@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block "title" %}Ludovic Nicolau - CV{% endblock %}
+{% block "header" %}
+    <link rel="stylesheet" href="{% static 'cv/css/cv.css' %}">
+    <link rel="stylesheet" href="{% static 'cv/css/skillbar.css' %}">
+{% endblock %}
+
+{% block "content" %}
+    <div class="cv-header">
+        <div class="cv-header__text">
+            <div class="cv-header__text__name">Ludovic Nicolau</div>
+            <div class="cv-header__text__animated-text">
+                Je suis <span class="cv-header__text__animated-text__function"></span><span class="blinking-cursor"></span>
+            </div>
+        </div>
+    </div>
+    <article class="cv">
+        <section class="skills">
+            <h2>Compétences</h2>
+            <div class="section-bar-separation"></div>
+            <div class="skills__skillbars">
+                <div>
+                    {% include 'cv/skillbar.html' with skill="C++" percentage="85" %}
+                    {% include 'cv/skillbar.html' with skill="OpenGL/GLSL" percentage="70" %}
+                    {% include 'cv/skillbar.html' with skill="Unreal Engine 5" percentage="70" %}
+                </div>
+                <div>
+                    {% include 'cv/skillbar.html' with skill="HTML5/CSS3" percentage="90" %}
+                    {% include 'cv/skillbar.html' with skill="Python" percentage="60" %}
+                    {% include 'cv/skillbar.html' with skill="Javascript" percentage="60" %}
+                </div>
+            </div>
+        </section>
+        <section class="scholarship">
+            <h2>Formation</h2>
+            <div class="section-bar-separation"></div>
+            <div class="experiences">
+                <div class="experience">
+                    <h3 class="experience__title">Master Image et Intelligence Artificielle - Multimédia</h3>
+                    <div class="experience__date">2015-2016</div>
+                    <div class="experience__location">Université de Bourgogne, Dijon</div>
+                    <div class="experience__description">Rendu en temps réel, mathématiques, développement web, etc...</div>
+                </div>
+                <div class="experience">
+                    <h3 class="experience__title">Licence Informatique</h3>
+                    <div class="experience__date">2013-2014</div>
+                    <div class="experience__location">Université de Bourgogne, Dijon</div>
+                    <div class="experience__description">Informatique générale, développement web, programmation orientée objet, C/C++, etc...</div>
+                </div>
+                <div class="experience">
+                    <h3 class="experience__title">Baccalauréat Scientifique</h3>
+                    <div class="experience__date">2010-2011</div>
+                    <div class="experience__location">Lycée chevalier d'Éon, Tonnerre</div>
+                    <div class="experience__description">Option sciences de l'ingénieur</div>
+                </div>
+            </div>
+        </section>
+        <section class="contact">            
+            <h2>Contact</h2>
+            <div class="section-bar-separation"></div>
+            <div class="contacts">
+                <div class="contacts__email">ludovic.nicolau@gmail.com</div>
+            </div>
+        </section>
+    </article>
+{% endblock %}
+
+{% block "scripts" %}
+
+    <script src="{% static 'cv/js/cv.js' %}"></script>
+
+{% endblock %}

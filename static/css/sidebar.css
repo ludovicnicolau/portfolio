@@ -1,0 +1,125 @@
+.sidebar {
+    --bg-color: #282B28;
+    --orange: #F4AC45;
+    --font-color: #D3D3D3;
+    --transition-duration: 0.2s;
+    background-color: var(--bg-color);
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: var(--font-color);
+    transform: translateX(-100%);
+    transition: var(--transition-duration) ease-in transform;
+    z-index: 10;
+}
+
+.sidebar--open {
+    transform: translateX(0);
+}
+
+.sidebar__profile-picture {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-image: url('../images/photo.jpg');
+    background-size: contain;
+    border: 5px solid var(--orange);
+
+}
+
+.sidebar__name {
+    font-size: 1.3em;
+}
+
+.sidebar__name--bg {
+    background-color: var(--orange);
+    color: var(--bg-color);
+    padding: 2px 2px;
+    border-radius: 4px;
+}
+
+.sidebar__socials {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.sidebar__socials img {
+    transform: scale(1);
+    transition: var(--transition-duration) transform;
+}
+
+.sidebar__socials img:hover {
+    color: red;
+    transform: scale(1.2);
+}
+
+.sidebar__sections {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar__sections a {
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 1.1em;
+    transition: var(--transition-duration) color;
+}
+
+.sidebar__sections li {
+    transition: var(--transition-duration) transform;
+}
+
+.sidebar__sections li:hover {
+    transform: scale(1.2);
+}
+
+.sidebar__sections li:hover a {
+    color: var(--orange);
+}
+
+.sidebar__burger {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    transform: translateX(100%);
+    background-color: var(--bg-color);
+    width: 32px;
+    height: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 3px 3px 0;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.sidebar__burger > div {
+    height: 4px;
+    width: 20px;
+    background-color: var(--font-color);
+}
+
+@media screen and (min-width: 800px) {
+
+    .sidebar {
+        width: 300px;
+        transform: translateX(0);
+        position: sticky;
+    }
+
+    .sidebar__burger {
+        visibility: hidden;
+    }
+
+}

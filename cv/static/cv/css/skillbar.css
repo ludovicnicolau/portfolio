@@ -1,0 +1,31 @@
+.skillbar {
+    --color-bg: #D3D3D3;
+    width: 100%;
+}
+
+.skillbar__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.skillbar__progress {
+    background-color: var(--color-bg);
+    width: 100%;
+    height: 10px;
+}
+
+.skillbar__progress__foreground {
+    width: var(--percentage);
+    height: 100%;
+    background-color: var(--color-orange);
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: var(--transition-time) transform;
+}
+
+.skillbar__progress__foreground--load {
+    transform: scaleX(1);
+}
