@@ -89,7 +89,7 @@
 
 .sidebar__burger {
     position: absolute;
-    top: 50px;
+    top: 150px;
     right: 0;
     transform: translateX(100%);
     background-color: var(--bg-color);

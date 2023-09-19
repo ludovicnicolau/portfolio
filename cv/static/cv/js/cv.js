@@ -34,13 +34,13 @@ function makeContactAppear() {
 
 window.addEventListener('scroll', () => {
     // isInView defined in 'js/utils'
-    if (isInView(skills, 125)) { 
+    if (isInView(skills, 10)) { 
         makeSkillsAppear();
     }
-    if (isInView(scholarship, 125)) {
+    if (isInView(scholarship, 10)) {
         makeScholarshipAppear();
     }
-    if (isInView(contact, 50)) {
+    if (isInView(contact, 5)) {
         makeContactAppear();
     }
 })
