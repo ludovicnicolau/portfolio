@@ -2,9 +2,9 @@
     height: 100vh;
     width: 100%;
     background-image: url('../images/background_pc.jpg');
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
-    background-position: center;
+    background-position: center, center;
     position: relative;
     z-index: -2;
 }
@@ -23,7 +23,7 @@
 }
 
 .cv-header__text__animated-text {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     z-index: -1;
 }
 
@@ -167,6 +167,42 @@
         display: flex;
         flex-direction: row;
         gap: 10px;
+    }
+
+    .cv-header {
+        width: 100%;
+    }
+
+    .cv-header__text__animated-text {
+        font-size: 1.2rem;
+    }
+
+    .cv-header__text {
+        position: fixed;
+        left: 25%;
+        bottom: 30%;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .skills__skillbars {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .cv-header__text__animated-text {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .cv-header {
+        background-attachment: fixed;
+    }
+
+    .cv-header__text {
+        position: fixed;
     }
 }
 

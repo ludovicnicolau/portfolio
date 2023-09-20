@@ -14,6 +14,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    bottom: 0;
     color: var(--font-color);
     transform: translateX(-100%);
     transition: var(--transition-duration) ease-in transform;
@@ -88,7 +89,7 @@
 }
 
 .sidebar__burger {
-    position: absolute;
+    position: fixed;
     top: 150px;
     right: 0;
     transform: translateX(100%);
