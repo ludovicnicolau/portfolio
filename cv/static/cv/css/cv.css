@@ -158,19 +158,11 @@
     padding-bottom: 20px;
 }
 
-.contacts__email {
-
-}
-
 @media screen and (min-width: 800px) {
     .skills__skillbars {
         display: flex;
         flex-direction: row;
         gap: 10px;
-    }
-
-    .cv-header {
-        width: 100%;
     }
 
     .cv-header__text__animated-text {
@@ -179,7 +171,7 @@
 
     .cv-header__text {
         position: fixed;
-        left: 25%;
+        left: 35%;
         bottom: 30%;
     }
 }
