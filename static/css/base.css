@@ -5,6 +5,7 @@
 
 body {
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 @media screen and (min-width: 800px) {

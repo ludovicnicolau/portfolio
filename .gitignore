@@ -1,6 +1,7 @@
 env/
 cv/__pycache__/
 project/__pycache__/
+collected_static/
 
 db.sqlite3
 token.txt
