@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block "head" %}
+    <link rel="stylesheet" href="{% static '404.css' %}">
+{% endblock %}
 
 {% block "content" %}
-    <p>La page recherchée n'existe pas. <a href="{% url 'cv:cv' %}">Retourner au site.</a></p>
+    <p class="error404">La page recherchée n'existe pas. <a href="{% url 'cv:cv' %}">Retourner au site.</a></p>
 {% endblock %}
